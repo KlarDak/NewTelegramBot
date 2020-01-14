@@ -1,0 +1,13 @@
+{
+    "name": "klardak/newtelegrambot",
+    "description": "Library for working with Telegram Bot API.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "KlarDak",
+            "email": "me@klardak.online"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
