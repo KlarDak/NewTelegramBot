@@ -1,5 +1,5 @@
 <?php
-  namespace KlarDak\TelegramBot\Entities\ReplyKeyboardMarkup;
+  namespace KlarDak\TelegramBot\Entities\KeyboardMarkup;
 
   class ReplyKeyboardRemove
   {
