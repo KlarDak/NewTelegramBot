@@ -3,11 +3,6 @@
 
   class InlineKeyboardButton
   {
-    function __construct(array $data)
-    {
-      return $data;
-    }
-
     public static function Button(string $text, string $url = null, array $login_url = null, string $callback_data = null, string $switch_inline_query = null, string $switch_inline_query_current_chat = null, array $callback_game = null, bool $pay = false)
     {
       return [
