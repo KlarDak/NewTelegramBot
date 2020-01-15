@@ -3,14 +3,9 @@
 
   class InlineKeyboardMarkup
   {
-    function __construct(array $keyboard)
+    public static function getKeyboard(array $keyboard)
     {
       return json_encode(["inline_keyboard" => $keyboard]);
-    }
-
-    public static getKeyboard(array $keyboard)
-    {
-      return self::__construct($keyboard);
     }
   }
 ?>
