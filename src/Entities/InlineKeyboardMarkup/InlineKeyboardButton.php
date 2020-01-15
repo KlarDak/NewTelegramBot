@@ -4,7 +4,7 @@
   class InlineKeyboardButton
   {
     public static function Button(string $text, string $url = null, array $login_url = null, string $callback_data = null, string $switch_inline_query = null, string $switch_inline_query_current_chat = null, array $callback_game = null, bool $pay = false)
-    {
+    { // TODO: add option: array instead of a lot of vars
       return [
         "text" => $text,
         "url" => $url,
