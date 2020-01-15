@@ -8,7 +8,7 @@
       return $data;
     }
 
-    public function addButton(string $text, string $url, array $login_url, string $callback_data, string $switch_inline_query, string $switch_inline_query_current_chat, array $callback_game = null, bool $pay = false)
+    public static function addButton(string $text, string $url, array $login_url, string $callback_data, string $switch_inline_query, string $switch_inline_query_current_chat, array $callback_game = null, bool $pay = false)
     {
       return [
         "text" => $text,
