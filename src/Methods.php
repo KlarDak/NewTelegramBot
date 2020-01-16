@@ -3,6 +3,8 @@
 
   class Methods
   {
+    public static $token = "";
+
     public static $types = [
       "text",
       "photo",
@@ -38,7 +40,14 @@
       "sendSticker",
       "sendChatAction",
       "forwardMessage",
-      "answerCallbackQuery"
+      "answerCallbackQuery",
+      "getFile",
+      "editMessageText",
+      "editMessageCaption",
+      "editMessageMedia",
+      "editMessageReplyMarkup",
+      "stopPoll",
+      "deleteMessage"
     ];
 
     public static $actions = [

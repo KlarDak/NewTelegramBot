@@ -3,11 +3,14 @@
 
   class TelegramBot
   {
-    protected $token = "";
+    public static $token = "";
 
     public $update_id = 0;
 
     public $message_id = 0;
+    public $chat_id = 0;
+    public $user_id = 0;
+
     public $from;
     public $chat;
     public $text;
@@ -29,6 +32,9 @@
     function __construct($token)
     {
       $this->token = $token;
+      Methods::$token = $token;
+      
+      return true;
     }
 
     public function getUpdates()
@@ -37,6 +43,8 @@
 
       $this->update_id = $data["update_id"];
       $this->message_id = $data["message"]["message_id"];
+      $this->user_id = $data["message"]["from"]["id"];
+      $this->chat_id = $data["message"]["chat"]["id"];
       $this->from = $data["message"]["from"];
       $this->chat = $data["message"]["chat"];
       $this->text = $data["message"]["text"];
@@ -173,6 +181,16 @@
     public function getUpdateID()
     {
       return $this->update_id;
+    }
+
+    public function getUserID()
+    {
+      return $this->user_id;
+    }
+
+    public function getChatID()
+    {
+      return $this->chat_id;
     }
 
     public function getDate()
