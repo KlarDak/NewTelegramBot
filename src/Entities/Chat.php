@@ -73,7 +73,9 @@
       return $this->last_name;
     }
 
-    public function getPhoto(); // TODO: add new Entity for array with photos;
+    public function getPhoto(){
+      return new ChatPhoto($this->photo);
+    }
 
     public function getDescription()
     {
@@ -85,7 +87,9 @@
       return $this->invite_link;
     }
 
-    public function getPinnedMessage(){} // TODO: add new Entity with Message data;
+    public function getPinnedMessage(){
+      return new Message($this->pinned_message);
+    }
 
     public function getPermission(){} // TODO: Yes, you need to add new Entity with getPermission;
 

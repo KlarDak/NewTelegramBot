@@ -12,20 +12,14 @@
 
     function __construct(array $data)
     {
-      if ($data["id"] > 0 && $data["first_name"] != null)
-      {
-          $this->id = $data["id"];
-          $this->is_bot = $data["is_bot"];
-          $this->first_name = $data["first_name"];
-          $this->last_name = $data["last_name"];
-          $this->username = $data["username"];
-          $this->language_code = $data["language_code"];
+        $this->id = $data["id"];
+        $this->is_bot = $data["is_bot"];
+        $this->first_name = $data["first_name"];
+        $this->last_name = $data["last_name"];
+        $this->username = $data["username"];
+        $this->language_code = $data["language_code"];
 
-          return true;
-      }
-      else {
-        return false;
-      }
+        return $data;
     }
 
     public function getID()
