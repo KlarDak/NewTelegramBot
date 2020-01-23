@@ -74,6 +74,7 @@
         curl_setopt($doaction, CURLOPT_POST, 1);
         curl_setopt($doaction, CURLOPT_POSTFIELDS, $data);
         curl_setopt($doaction, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($doaction, CURLOPT_BINARYTRANSFER, 1);
         $result = curl_exec($doaction);
         curl_close($doaction);
 
