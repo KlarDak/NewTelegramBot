@@ -47,7 +47,8 @@
       "editMessageMedia",
       "editMessageReplyMarkup",
       "stopPoll",
-      "deleteMessage"
+      "deleteMessage",
+      "getUserProfilePhotos"
     ];
 
     public static $actions = [
