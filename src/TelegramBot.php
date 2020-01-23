@@ -231,6 +231,11 @@
     {
       return new Entities\File(self::doAction("getFile", ["file_id" => $file_id]));
     }
+
+    public function getUserProfilePhotos(array $data)
+    {
+      return new Entities\UserProfilePhotos(self::doAction("getUserProfilePhotos", $data));
+    }
   }
 
 ?>
