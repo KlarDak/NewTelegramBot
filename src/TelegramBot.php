@@ -33,7 +33,7 @@
     {
       $this->token = $token;
       Methods::$token = $token;
-      
+
       return true;
     }
 
@@ -101,7 +101,7 @@
       return new Entities\Message($data["message"]);
     }
 
-    public function getPhoto(int $elemarray = null) // Temporarily function
+    public function getPhoto(int $elemarray = -1) // Temporarily function
     {
       if ($elemarray >= 0)
       {
