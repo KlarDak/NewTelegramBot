@@ -77,6 +77,13 @@
         $result = curl_exec($doaction);
         curl_close($doaction);
 
+        if (array_key_exists("result", $result)){
+          return $result["result"];
+        }
+        else {
+          return $result;
+        }
+
         return $result;
       }
       else
