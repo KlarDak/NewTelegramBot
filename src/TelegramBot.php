@@ -75,7 +75,7 @@
         curl_setopt($doaction, CURLOPT_POSTFIELDS, $data);
         curl_setopt($doaction, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($doaction, CURLOPT_BINARYTRANSFER, 1);
-        $result = json_decode(curl_exec($doaction));
+        $result = json_decode(curl_exec($doaction), true);
         curl_close($doaction);
 
         if (array_key_exists("result", $result)){
