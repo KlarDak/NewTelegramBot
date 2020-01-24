@@ -24,7 +24,10 @@
     ];
 
     public static $methods = [
+      // Available methods
+      "getMe",
       "sendMessage",
+      "forwardMessage",
       "sendPhoto",
       "sendVideo",
       "sendAnimation",
@@ -34,21 +37,50 @@
       "sendVideoNote",
       "sendMediaGroup",
       "sendLocation",
+      "editMessageLiveLocation",
+      "stopMessageLiveLocation",
       "sendVenue",
       "sendContact",
       "sendPoll",
-      "sendSticker",
       "sendChatAction",
-      "forwardMessage",
-      "answerCallbackQuery",
+      "getUserProfilePhotos",
       "getFile",
+      "kickChatMember",
+      "unbanChatMember",
+      "restrictChatMember",
+      "promoteChatMember",
+      "setChatAdministatorCustomTitle",
+      "setChatPermission",
+      "exportChatInviteLink",
+      "setChatPhoto",
+      "deleteChatPhoto",
+      "setChatTitle",
+      "setChatDescription",
+      "pibChatMessage",
+      "unpinChatMessage",
+      "leaveChat",
+      "getChat",
+      "getChatAdministrators",
+      "getChatMembersCount",
+      "getChatMember",
+      "setChatStickerSet",
+      "deleteChatStickerSet",
+      "answerCallbackQuery",
+      // Updating messages
       "editMessageText",
       "editMessageCaption",
       "editMessageMedia",
       "editMessageReplyMarkup",
       "stopPoll",
       "deleteMessage",
-      "getUserProfilePhotos"
+      // Stickers
+      "sendSticker",
+      "getStickerSet",
+      "uploadStickerFile",
+      "createNewStickerSet",
+      "addStickerToSet",
+      "setStickerPositionInSet",
+      "deleteStickerFromSet"
     ];
 
     public static $actions = [

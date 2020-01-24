@@ -29,15 +29,25 @@
     public $poll;
     public $sticker;
 
-    function __construct($token)
+    function __construct(string $token, bool $getupdates = false)
     {
       $this->token = $token;
       Methods::$token = $token;
 
+      if ($getupdates === true)
+      {
+        self::getUpdate();
+      }
+
       return true;
     }
 
-    public function getUpdates()
+    public function getUpdates(int $offset = 0, int $limit = 10, int $timeout = 0, array $allowed_updates = ["message", "callback_query", "inline_query"])
+    {
+      return self::doAction("getUpdates", ["offset" => $offset, "limit" => $limit, "timeout" => $timeout, "allowed_updates", $allowed_updates]);
+    }
+
+    private function getUpdate()
     {
       $data = json_decode(file_get_contents("php://input"), true);
 

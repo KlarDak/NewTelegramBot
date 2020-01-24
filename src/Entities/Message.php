@@ -166,5 +166,90 @@
     {
       return new Poll($this->data["poll"]);
     }
+
+    public function getNewChatMembers(int $elem = -1)
+    {
+      if ($elem >= 0)
+      {
+        return new User($this->data["new_chat_members"][$elem]);
+      }
+      else
+      {
+        return $this->data["new_chat_members"];
+      }
+    }
+
+    public function getLeftChatMember()
+    {
+      return new User($this->data["left_chat_member"]);
+    }
+
+    public function getNewChatTitle()
+    {
+      return $this->data["new_chat_title"];
+    }
+
+    public function getNewChatPhoto(int $elem = -1)
+    {
+      if ($elem >= 0)
+      {
+        return new PhotoSize($this->data["new_chat_photo"]);
+      }
+      else
+      {
+        return $this->data["new_chat_photo"];
+      }
+    }
+
+    public function isDeleteChatPhoto()
+    {
+      return $this->data["delete_chat_photo"];
+    }
+
+    public function isGroupChatCreated()
+    {
+      return $this->data["group_chat_created"];
+    }
+
+    public function isSupergroupChatCreated()
+    {
+      return $this->data["supergroup_chat_created"];
+    }
+
+    public function isChannelChatCreated()
+    {
+      return $this->data["channel_chat_created"];
+    }
+
+    public function getMigrateToChatID()
+    {
+      return $this->data["migrate_to_chat_id"];
+    }
+
+    public function getMigrateFromChatID()
+    {
+      return $this->data["migrate_from_chat_id"];
+    }
+
+    public function getPinnedMessage()
+    {
+      return new Message($this->data["pinned_message"]);
+    }
+
+    public function getInvoice(){} // Coming soon...
+
+    public function getSuccessfulPayment(){} // Coming soon too...
+
+    public function getConnectedWebsite()
+    {
+      return $this->data["connected_website"];
+    }
+
+    public function getPassportData(){} // Not realised
+
+    public function getReplyMarkup()
+    {
+      return new InlineKeyboardMarkup\InlineKeyboardMarkup($this->data["reply_markup"]);
+    }
   }
 ?>
