@@ -9,6 +9,9 @@
     public $last_name;
     public $username;
     public $language_code;
+    public $can_join_groups = false;
+    public $can_read_all_group_messages = false;
+    public $supports_inline_queries = false;
 
     function __construct(array $data)
     {
@@ -50,6 +53,21 @@
     public function getLanguageCode()
     {
       return $this->language_code;
+    }
+
+    public function canJoinGroups()
+    {
+      return $this->can_join_groups;
+    }
+
+    public function canReadAllGroupMessages()
+    {
+      return $this->can_read_all_group_messages;
+    }
+
+    public function canSupportsInlineQueries()
+    {
+      return $this->supports_inline_queries;
     }
   }
 

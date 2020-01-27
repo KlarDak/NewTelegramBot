@@ -76,7 +76,7 @@
       return $data;
     }
 
-    public function doAction(string $type = "sendMessage", array $data)
+    public function doAction(string $type = "getMe", array $data, bool $resultobj = false)
     {
       if (in_array($type, Methods::$methods))
       {
@@ -89,7 +89,29 @@
         curl_close($doaction);
 
         if (array_key_exists("result", $result)){
-          return $result["result"];
+          if ($resultobj === true)
+          {
+            if (gettype($result["result"]) == ("bool" || "int") || $type == "getChatAdministators")
+            {
+              return $result["result"];
+            }
+            else{
+              $eMethods = [
+                "getMe" => "User",
+                "getUserProfilePhotos" => "UserProfilePhotos",
+                "getFile" => "File",
+                "getChat" => "Chat",
+                "getChatMember" => "ChatMember",
+                "getStickerSet" => "\Stickers\StickerSet"
+              ];
+
+              return (array_key_exists($type, $eMethods)) ? new $eMethods[$type]($result["result"]) : new Entities\Message($result["result"]);
+            }
+          }
+          else
+          {
+            return $result["result"];
+          }
         }
         else {
           return $result;
@@ -243,6 +265,11 @@
     public function getUserProfilePhotos(array $data)
     {
       return new Entities\UserProfilePhotos(self::doAction("getUserProfilePhotos", $data));
+    }
+
+    public function getMe()
+    {
+      return new Entities\User(self::doAction("getMe", []));
     }
   }
 
