@@ -179,30 +179,5 @@
         }
       }
     }
-
-    public function doChatAction($chat_id, string $action)
-    {
-      self::doAction("sendChatAction", ["chat_id" => $chat_id, "action" => $action]);
-    }
-
-    public function forwardMessage($chat_id, $from_chat_id, bool $disable_notification, int $message_id)
-    {
-      return self::doAction("forwardMessage", ["chat_id" => $chat_id, "from_chat_id" => $from_chat_id, "disable_notification" => $disable_notification, "message_id" => $message_id]);
-    }
-
-    public function getFile(string $file_id)
-    {
-      return new Entities\File(self::doAction("getFile", ["file_id" => $file_id]));
-    }
-
-    public function getUserProfilePhotos(array $data)
-    {
-      return new Entities\UserProfilePhotos(self::doAction("getUserProfilePhotos", $data));
-    }
-
-    public function getMe()
-    {
-      return new Entities\User(self::doAction("getMe", []));
-    }
   }
 ?>

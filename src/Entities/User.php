@@ -21,6 +21,9 @@
         $this->last_name = $data["last_name"];
         $this->username = $data["username"];
         $this->language_code = $data["language_code"];
+        $this->can_join_groups = $data["can_join_groups"];
+        $this->can_read_all_group_messages = $data["can_read_all_group_messages"];
+        $this->supports_inline_queries = $data["supports_inline_queries"];
 
         return $data;
     }

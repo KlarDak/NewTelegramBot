@@ -24,6 +24,11 @@
     ];
 
     public static $methods = [
+      // WehHooks
+      "getUpdates",
+      "setWebhook",
+      "deleteWebhook",
+      "getWebhookInfo",
       // Available methods
       "getMe",
       "sendMessage",
