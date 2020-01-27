@@ -6,11 +6,11 @@
     public static $token = "";
 
     public $sendquery = [
-      "CURLOPT_POST" => 1,
+      CURLOPT_POST => 1,
       // "CURLOPT_POSTFIELDS" => "",
-      "CURLOPT_RETURNTRANSFER" => 1,
-      "CURLOPT_BINARYTRANSFER" => 1,
-      "CURLOPT_FOLLOWLOCATION" => 1,
+      CURLOPT_RETURNTRANSFER => 1,
+      CURLOPT_BINARYTRANSFER => 1,
+      CURLOPT_FOLLOWLOCATION => 1,
       // "CURLOPT_PROXY" => "",
       // "CURLOPT_PROXYUSERPWD" => ""
     ];
