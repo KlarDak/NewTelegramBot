@@ -51,12 +51,14 @@
                 }
                 else
                 {
+                  $result = json_decode($result["result"], true);
+
                   switch ($type) {
                     case 'getMe':
-                      return Entities\User($result["result"]);
+                      return Entities\User($result);
                     break;
                     default:
-                      return Entities\Message($result["result"]);
+                      return Entities\Message($result);
                     break;
                   }
                 }
