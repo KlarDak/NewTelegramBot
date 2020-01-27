@@ -96,16 +96,16 @@
               return $result["result"];
             }
             else{
-              $eMethods = [
-                "getMe" => "User",
-                "getUserProfilePhotos" => "UserProfilePhotos",
-                "getFile" => "File",
-                "getChat" => "Chat",
-                "getChatMember" => "ChatMember",
-                "getStickerSet" => "\Stickers\StickerSet"
-              ];
+              // $eMethods = [
+              //   "getMe" => "User",
+              //   "getUserProfilePhotos" => "UserProfilePhotos",
+              //   "getFile" => "File",
+              //   "getChat" => "Chat",
+              //   "getChatMember" => "ChatMember",
+              //   "getStickerSet" => "\Stickers\StickerSet"
+              // ];
 
-              return (array_key_exists($type, $eMethods)) ? new $eMethods[$type]($result["result"]) : new Entities\Message($result["result"]);
+              // return (array_key_exists($type, $eMethods)) ? new $eMethods[$type]($result["result"]) : new Entities\Message($result["result"]);
             }
           }
           else
