@@ -38,7 +38,7 @@
       if (in_array($type, Methods::$methods))
       {
         $doaction = curl_init("https://api.telegram.org/bot". $this->token ."/". $type);
-        $this->sendquery["CURLOPT_POSTFIELDS"] = $data;
+        $this->sendquery[CURLOPT_POSTFIELDS] = $data;
         curl_setopt_array($doaction, $this->sendquery);
         $result = json_decode(curl_exec($doaction), true);
         curl_close($doaction);
