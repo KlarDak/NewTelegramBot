@@ -85,7 +85,11 @@
       "createNewStickerSet",
       "addStickerToSet",
       "setStickerPositionInSet",
-      "deleteStickerFromSet"
+      "deleteStickerFromSet",
+      // Payments
+      "sendInvoice",
+      "answerShippingQuery",
+      "answerPreCheckoutQuery"
     ];
 
     public static $actions = [
