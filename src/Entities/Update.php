@@ -48,9 +48,13 @@
       return new CallbackQuery($this->update_obj["callback_query"]);
     }
 
-    public function getShippingQuery(){} // TODO: Coming soon too...
+    public function getShippingQuery(){
+      return new Payments\ShippingQuery($this->update_obj["shipping_query"]);
+    } // TODO: Coming soon too...
 
-    public function getPreCheckoutQuery(){} // TODO: Yes, coming soon, yes...
+    public function getPreCheckoutQuery(){
+      return new Payments\PreCheckoutQuery($this->update_obj["pre_checkout_query"]);
+    }
 
     public function getPoll()
     {
