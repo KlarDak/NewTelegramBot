@@ -22,10 +22,15 @@
 
       if ($getupdates === true)
       {
-        self::getUpdate();
+        self::catchUpdate();
       }
 
       return true;
+    }
+
+    public function getUpdate()
+    {
+      return new Entities\Update(json_decode(file_get_contents("php://input"), true));
     }
 
     public function getUpdates(int $offset = 0, int $limit = 10, int $timeout = 0, array $allowed_updates = ["message", "callback_query", "inline_query"])

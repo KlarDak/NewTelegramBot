@@ -27,7 +27,7 @@
     public $poll;
     public $sticker;
 
-    public function getUpdate()
+    public function catchUpdate()
     {
       $data = json_decode(file_get_contents("php://input"), true);
 
