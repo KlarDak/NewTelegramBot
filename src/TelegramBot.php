@@ -54,8 +54,11 @@
             else
             {
               switch ($type) {
+                case 'Update':
+                  return new Update($this->result["result"]);
+                break;
                 case 'getUpdates':
-                  return new Entities\Update($this->result["result"]);
+                  return $this->result["result"];
                 break;
                 case 'getMe':
                   return new Entities\User($result["result"]);
