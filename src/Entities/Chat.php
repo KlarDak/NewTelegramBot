@@ -19,28 +19,21 @@
 
     function __construct(array $data)
     {
-      if ($data["id"] > 0 && $data["type"] != null)
-      {
-        $this->id = $data["id"];
-        $this->type = $data["type"];
-        $this->title = $data["title"];
-        $this->username = $data["username"];
-        $this->first_name = $data["first_name"];
-        $this->last_name = $data["last_name"];
-        $this->photo = $data["photo"];
-        $this->description = $data["description"];
-        $this->invite_link = $data["invite_link"];
-        $this->pinned_message = $data["pinned_message"];
-        $this->slow_mode_delay = $data["slow_mode_delay"];
-        $this->sticker_set_name = $data["sticker_set_name"];
-        $this->can_set_sticker_set = $data["can_set_sticker_set"];
+      $this->id = $data["id"];
+      $this->type = $data["type"];
+      $this->title = $data["title"];
+      $this->username = $data["username"];
+      $this->first_name = $data["first_name"];
+      $this->last_name = $data["last_name"];
+      $this->photo = $data["photo"];
+      $this->description = $data["description"];
+      $this->invite_link = $data["invite_link"];
+      $this->pinned_message = $data["pinned_message"];
+      $this->slow_mode_delay = $data["slow_mode_delay"];
+      $this->sticker_set_name = $data["sticker_set_name"];
+      $this->can_set_sticker_set = $data["can_set_sticker_set"];
 
-        return true;
-      }
-      else
-      {
-          return false;
-      }
+      return true;
     }
 
     public function getID()
