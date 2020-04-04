@@ -54,7 +54,7 @@
 
     public function getForwardSenderName()
     {
-      return $This->data["forward_sender_name"];
+      return $this->data["forward_sender_name"];
     }
 
     public function getForwardDate()
@@ -167,6 +167,11 @@
       return new Poll($this->data["poll"]);
     }
 
+    public function getDice()
+    {
+      return new Dice($this->data["dice"]);
+    }
+
     public function getNewChatMembers(int $elem = -1)
     {
       if ($elem >= 0)
@@ -236,9 +241,13 @@
       return new Message($this->data["pinned_message"]);
     }
 
-    public function getInvoice(){} // Coming soon...
+    public function getInvoice(){
+      return new Payments\Invoice($this->data["invoice"]);
+    }
 
-    public function getSuccessfulPayment(){} // Coming soon too...
+    public function getSuccessfulPayment(){
+      return new Payments\SuccessfulPayment($this->data["invoice"]);
+    }
 
     public function getConnectedWebsite()
     {

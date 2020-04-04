@@ -42,6 +42,7 @@
       "sendVideoNote",
       "sendMediaGroup",
       "sendLocation",
+      "sendDice",
       "editMessageLiveLocation",
       "stopMessageLiveLocation",
       "sendVenue",
@@ -71,6 +72,8 @@
       "setChatStickerSet",
       "deleteChatStickerSet",
       "answerCallbackQuery",
+      "setMyCommands",
+      "getMyCommands",
       // Updating messages
       "editMessageText",
       "editMessageCaption",
