@@ -67,6 +67,11 @@
       return new Message($this->data["reply_to_message"]);
     }
 
+    public function getViaBot()
+    {
+      return new Message($this->data["via_bot"]);
+    }
+
     public function getEditDate()
     {
       return $this->data["edit_date"];
