@@ -72,6 +72,12 @@
       return new Entities\Message($data["message"]);
     }
 
+    public function getChannelPost()
+    {
+      $data = json_decode(file_get_contents("php://input"), true);
+      return new Entities\Message($data["channel_post"]); 
+    }
+
     public function getPhoto(int $elemarray = -1) // Temporarily function
     {
       if ($elemarray >= 0)
