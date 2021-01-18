@@ -33,6 +33,7 @@
       "getMe",
       "sendMessage",
       "forwardMessage",
+      "copyMessage",
       "sendPhoto",
       "sendVideo",
       "sendAnimation",
