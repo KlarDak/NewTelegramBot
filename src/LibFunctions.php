@@ -69,12 +69,12 @@
 
     public function getMessage()
     {
-      return new Entities\Message($data["message"]);
+      return new Entities\Message($this->data["message"]);
     }
 
     public function getChannelPost()
     {
-      return new Entities\Message($data["channel_post"]);
+      return new Entities\Message($this->data["channel_post"]);
     }
 
     public function getPhoto(int $elemarray = -1) // Temporarily function
