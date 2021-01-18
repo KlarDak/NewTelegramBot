@@ -22,6 +22,11 @@
       return new User($this->data["from"]);
     }
 
+    public function getSenderChat()
+    {
+      return new Chat($this->data["sender_chat"]);
+    }
+
     public function getDate()
     {
       return $this->data["date"];

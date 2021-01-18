@@ -3,8 +3,9 @@
 
   class LibFunctions
   {
-    public $update_id = 0;
+    public $data;
 
+    public $update_id = 0;
     public $message_id = 0;
     public $chat_id = 0;
     public $user_id = 0;
@@ -29,7 +30,7 @@
 
     public function catchUpdate()
     {
-      $data = json_decode(file_get_contents("php://input"), true);
+      $this->data = json_decode(file_get_contents("php://input"), true);
 
       $this->update_id = $data["update_id"];
       $this->message_id = $data["message"]["message_id"];
@@ -68,14 +69,12 @@
 
     public function getMessage()
     {
-      $data = json_decode(file_get_contents("php://input"), true);
       return new Entities\Message($data["message"]);
     }
 
     public function getChannelPost()
     {
-      $data = json_decode(file_get_contents("php://input"), true);
-      return new Entities\Message($data["channel_post"]); 
+      return new Entities\Message($data["channel_post"]);
     }
 
     public function getPhoto(int $elemarray = -1) // Temporarily function
